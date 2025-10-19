@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /$
+Allow: /favicon.ico
+Disallow: /about
+Disallow: /wiki
+Disallow: /rules
+Disallow: /pass
+
+# Sitemap (только главная страница)
+Sitemap: https://d-mine.net/sitemap.xml

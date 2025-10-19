@@ -4,7 +4,17 @@ import { extractImageUrls } from "@/lib/extractImages";
 import WikiNavigation from "@/components/WikiNavigation/WikiNavigation";
 import WikiMobileMenu from "@/components/WikiMobileMenu/WikiMobileMenu";
 import MarkdownRenderer from "@/components/MarkdownRenderer/MarkdownRenderer";
+import { Metadata } from "next";
 import styles from "./page.module.scss";
+
+export const metadata: Metadata = {
+  title: "Wiki",
+  description: "База знаний сервера D.Mine",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function Wiki() {
   const pages = getWikiPages();

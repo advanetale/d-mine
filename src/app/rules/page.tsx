@@ -1,6 +1,17 @@
 import fs from "fs";
 import path from "path";
 import RulesClient from "./RulesClient";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Правила сервера",
+  description:
+    "Правила игры на сервере D.Mine. Ознакомьтесь с основными требованиями и ограничениями для комфортной игры.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 async function getRulesContent() {
   try {

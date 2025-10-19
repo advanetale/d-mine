@@ -1,6 +1,17 @@
 import styles from "./page.module.scss";
 import AboutCarousel, { type CarouselImage } from "./AboutCarousel";
 import { getAboutImages } from "./getAboutImages";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "О сервере",
+  description:
+    "D.Mine — приватный сервер Minecraft с уникальной системой выживания на острове. Кастомные рецепты, экономика, дружелюбное сообщество.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default async function About() {
   const serverFeatures = [

@@ -4,6 +4,7 @@ import { extractImageUrls } from "@/lib/extractImages";
 import WikiNavigation from "@/components/WikiNavigation/WikiNavigation";
 import WikiMobileMenu from "@/components/WikiMobileMenu/WikiMobileMenu";
 import MarkdownRenderer from "@/components/MarkdownRenderer/MarkdownRenderer";
+import { Metadata } from "next";
 import styles from "../page.module.scss";
 
 interface WikiPageProps {
@@ -74,6 +75,40 @@ export default async function WikiPage({ params }: WikiPageProps) {
       </div>
     </main>
   );
+}
+
+// Генерируем метаданные для каждой страницы wiki
+export async function generateMetadata({
+  params,
+}: WikiPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const page = getWikiPage(slug);
+
+  if (!page) {
+    return {
+      title: "Страница не найдена",
+      description: "Запрашиваемая страница вики не существует",
+    };
+  }
+
+  // Извлекаем первый абзац как описание
+  const description =
+    page.content
+      .replace(/^#.*$/gm, "") // Убираем заголовки
+      .replace(/!\[.*?\]\(.*?\)/g, "") // Убираем изображения
+      .split("\n")
+      .find((line) => line.trim().length > 0)
+      ?.trim()
+      .substring(0, 160) || `Страница ${page.title} в вики D.Mine`;
+
+  return {
+    title: page.title,
+    description,
+    robots: {
+      index: false,
+      follow: false,
+    },
+  };
 }
 
 // Генерируем статические пути для всех страниц вики

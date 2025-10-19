@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import GoogleAnalytics from "@/components/GoogleAnalytics/GoogleAnalytics";
+import StructuredData from "@/components/StructuredData/StructuredData";
 import "./globals.scss";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import Header from "@/components/Header/Header";
@@ -18,8 +19,46 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "D.Mine",
-  description: "Оффициальный сайт сервера D.Mine",
+  title: {
+    default: "D.Mine - Minecraft сервер",
+    template: "%s | D.Mine",
+  },
+  description:
+    "Официальный сайт сервера D.Mine - частный Minecraft сервер с уникальными возможностями и дружелюбным сообществом",
+  keywords: ["minecraft", "сервер", "d.mine", "игра", "выживание", "креатив"],
+  authors: [{ name: "D.Mine Team" }],
+  creator: "D.Mine",
+  publisher: "D.Mine",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "ru_RU",
+    url: "https://d-mine.net", // Замените на ваш домен
+    siteName: "D.Mine",
+    title: "D.Mine - Minecraft сервер",
+    description:
+      "Официальный сайт сервера D.Mine - частный Minecraft сервер с уникальными возможностями",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "D.Mine - Minecraft сервер",
+    description:
+      "Официальный сайт сервера D.Mine - частный Minecraft сервер с уникальными возможностями",
+  },
+  verification: {
+    // google: 'your-google-verification-code', // Добавьте после регистрации в Google Search Console
+    // yandex: 'your-yandex-verification-code', // Добавьте после регистрации в Яндекс.Вебмастер
+  },
 };
 
 export default function RootLayout({
@@ -61,6 +100,24 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <GoogleAnalytics trackPageViews gaMeasurementId="G-18W35FN0K0" />
+        <StructuredData
+          type="website"
+          data={{
+            name: "D.Mine",
+            url: "https://d-mine.net",
+            description:
+              "Официальный сайт сервера D.Mine - частный Minecraft сервер",
+          }}
+        />
+        <StructuredData
+          type="organization"
+          data={{
+            name: "D.Mine",
+            url: "https://d-mine.net",
+            description: "Частный Minecraft сервер с уникальными возможностями",
+            socialLinks: ["https://t.me/dminenet"],
+          }}
+        />
         <BackgroundVideo />
         <ThemeProvider>
           <Header />
