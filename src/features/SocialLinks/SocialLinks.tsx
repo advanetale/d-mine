@@ -10,13 +10,13 @@ const SocialLinks = ({ className }: SocialLinksProps) => {
   const socialLinks = [
     {
       icon: <FaTelegramPlane />,
-      href: "https://t.me/your_channel", // Замени на реальную ссылку
+      href: "https://t.me/dminenet", // Замени на реальную ссылку
       title: "Telegram",
       ariaLabel: "Перейти в Telegram канал",
     },
     {
       icon: <MdSupportAgent />,
-      href: "https://t.me/your_support_bot", // Замени на реальную ссылку техподдержки
+      href: "https://t.me/dmine_support", // Замени на реальную ссылку техподдержки
       title: "Техподдержка",
       ariaLabel: "Связаться с техподдержкой",
     },
