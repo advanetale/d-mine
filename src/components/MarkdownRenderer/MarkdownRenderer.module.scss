@@ -1,0 +1,119 @@
+.markdown {
+  color: var(--foreground);
+  line-height: 1.6;
+}
+
+.h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: var(--foreground);
+  scroll-margin-top: 100px;
+}
+
+.h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+  color: var(--foreground);
+  scroll-margin-top: 100px;
+}
+
+.h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem 0;
+  color: var(--foreground);
+  scroll-margin-top: 100px;
+}
+
+.paragraph {
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.list {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  color: var(--foreground);
+}
+
+.orderedList {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  color: var(--foreground);
+}
+
+.listItem {
+  margin-bottom: 0.5rem;
+}
+
+.link {
+  color: var(--link-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.inlineCode {
+  background: var(--gray-alpha-100);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.codeBlock {
+  background: var(--gray-alpha-100);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1rem 0;
+
+  code {
+    font-family: monospace;
+    font-size: 0.9em;
+  }
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.italic {
+  font-style: italic;
+}
+
+// Стили для изображений
+.imageContainer {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--gray-alpha-50);
+  border-radius: 12px;
+  border: 1px solid var(--gray-alpha-100);
+}
+
+.image {
+  max-width: 100%;
+  min-width: 150px; // Минимальная ширина для мобильных
+  min-height: 120px; // Минимальная высота для мобильных
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  object-fit: contain; // Сохраняет пропорции изображения
+
+  // Увеличиваем минимальный размер на больших экранах
+  @media (min-width: 768px) {
+    min-width: 200px;
+    min-height: 150px;
+  }
+
+  @media (min-width: 1024px) {
+    min-width: 250px;
+    min-height: 180px;
+  }
+}

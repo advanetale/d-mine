@@ -1,0 +1,169 @@
+.page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 0; // Убираем отступ, чтобы контент мог проходить под header
+  font-family: var(--font-geist-sans);
+}
+
+.main {
+  text-align: center;
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 120px; // Увеличиваем отступ сверху для шапки
+}
+
+.tabs {
+  display: inline-flex;
+  background: var(--gray-alpha-100);
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 12px;
+  padding: 6px;
+  gap: 6px;
+  backdrop-filter: blur(8px);
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  color: var(--foreground);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tab:hover {
+  background: var(--button-secondary-hover);
+}
+
+.tabActive {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Брендовые цвета */
+.tabBoosty.tabActive {
+  background: #f15f2c; /* Boosty */
+}
+
+.tabTwitch.tabActive {
+  background: #9146ff; /* Twitch */
+}
+
+.card {
+  width: 100%;
+  background: var(--gray-alpha-100);
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: left;
+  margin-bottom: 48px;
+  backdrop-filter: blur(8px);
+}
+
+.title {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: rgba(var(--gray-rgb), 0.7);
+}
+
+.steps {
+  margin-top: 16px;
+  display: grid;
+  gap: 8px;
+  padding-left: 18px;
+}
+
+.actions {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.link {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+.cta:hover {
+  background: var(--button-primary-hover);
+}
+
+.ctaBoosty {
+  background: #f15f2c;
+}
+
+.ctaBoosty:hover {
+  background: #d64f22;
+}
+
+.ctaTwitch {
+  background: #9146ff;
+}
+
+.ctaTwitch:hover {
+  background: #7a35f4;
+}
+
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #fff;
+}
+
+.ctaSecondary:hover {
+  background: var(--button-primary-hover);
+}
+
+// Mobile responsiveness
+@media (max-width: 768px) {
+  .main {
+    margin-top: 100px; // Отступ для мобильных устройств
+    padding: 0 1rem;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta,
+  .ctaSecondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

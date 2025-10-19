@@ -1,0 +1,246 @@
+.generator {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: var(--plaque-bg);
+  border-radius: 12px;
+  border: 1px solid var(--gray-alpha-200);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  margin-top: 0 !important;
+  color: var(--primary);
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+  }
+
+  &::placeholder {
+    color: var(--gray-alpha-300);
+  }
+}
+
+.colorRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.colorGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.colorInputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.colorPicker {
+  width: 50px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--gray-alpha-200);
+  flex-shrink: 0;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+
+  &::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 6px;
+  }
+
+  &::-webkit-color-swatch {
+    border: none;
+    border-radius: 6px;
+  }
+
+  &::-moz-color-swatch {
+    border: none;
+    border-radius: 6px;
+  }
+}
+
+.colorInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 1rem;
+  font-family: monospace;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+  }
+}
+
+.buttonRow {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.generateButton {
+  flex: 1;
+  padding: 1rem 2rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+
+  &:hover:not(:disabled) {
+    background: var(--button-primary-hover);
+    transform: translateY(-1px);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    background: var(--gray-alpha-200);
+    cursor: not-allowed;
+    transform: none;
+  }
+}
+
+.resetButton {
+  padding: 1rem 1.5rem;
+  background: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background: var(--gray-alpha-100);
+    border-color: var(--gray-alpha-300);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.resultSection {
+  margin-bottom: 1.5rem;
+}
+
+.resultWrapper {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.result {
+  flex: 1;
+  padding: 1rem;
+  background: var(--gray-alpha-100);
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  word-break: break-all;
+  line-height: 1.4;
+  color: var(--foreground);
+}
+
+.copyButton {
+  padding: 1rem 1.5rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background: var(--button-primary-hover);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.previewSection {
+  margin-bottom: 0;
+}
+
+.previewWrapper {
+  padding: 1.5rem;
+  background: var(--gray-alpha-100);
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.preview {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
+}

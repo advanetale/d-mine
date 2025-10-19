@@ -1,0 +1,40 @@
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  color: var(--foreground);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--primary);
+    background-color: var(--gray-alpha-100);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  svg {
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover svg {
+    transform: scale(1.1);
+  }
+}
+
+// Специфичные цвета для каждой ссылки при наведении
+.socialLink:hover {
+  color: var(--primary);
+}

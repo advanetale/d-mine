@@ -1,0 +1,112 @@
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 0; // Убираем отступ, чтобы контент мог проходить под header
+  font-family: var(--font-geist-sans);
+  position: relative;
+}
+
+.main {
+  text-align: center;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 100px; // Добавляем отступ только к main контенту
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--primary);
+  font-family: var(--font-geist-sans);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--foreground);
+  opacity: 0.9;
+  line-height: 1.4;
+  font-family: var(--font-geist-sans);
+  margin: 0;
+}
+
+.version {
+  background: var(--plaque-bg);
+  color: var(--foreground);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--gray-alpha-200);
+  backdrop-filter: blur(8px);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.serverInfo {
+  margin-top: 1rem;
+}
+
+.serverIP {
+  background: var(--gray-alpha-100);
+  color: var(--primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid var(--gray-alpha-200);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-top: 80px; // Уменьшаем отступ для мобильных
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+
+    > a,
+    > button {
+      width: 100%;
+    }
+
+    // Для Link компонента
+    > a > button {
+      width: 100%;
+    }
+  }
+
+  .version {
+    font-size: 0.8rem;
+  }
+
+  .serverIP {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}

@@ -1,0 +1,54 @@
+// Light theme variables (по умолчанию)
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-300: rgba(var(--gray-rgb), 0.12);
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-150: rgba(var(--gray-rgb), 0.05);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.03);
+  --gray-alpha-50: rgba(var(--gray-rgb), 0.015);
+  --plaque-bg: #fafafa;
+  --primary: #4a90e2;
+  --link-color: var(--primary);
+  --button-primary-hover: #357abd;
+  --button-secondary-hover: #f2f2f2;
+
+  // Container variables
+  --container-max-width: 1200px;
+  --container-padding: 1rem;
+  --container-padding-lg: 2rem;
+}
+
+// Fallback для системной темной темы (применяется до загрузки JavaScript)
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-300: rgba(var(--gray-rgb), 0.2);
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+    --gray-alpha-150: rgba(var(--gray-rgb), 0.1);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+    --gray-alpha-50: rgba(var(--gray-rgb), 0.06);
+    --plaque-bg: rgba(var(--gray-rgb), 0.08);
+    --primary: #5ba3f5;
+    --button-primary-hover: #7bb8f7;
+    --button-secondary-hover: #1a1a1a;
+  }
+}
+
+// Dark theme variables
+[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --gray-rgb: 255, 255, 255;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-50: rgba(var(--gray-rgb), 0.08);
+  --plaque-bg: rgba(var(--gray-rgb), 0.08);
+  --primary: #5ba3f5;
+  --link-color: var(--primary);
+  --button-primary-hover: #7bb8f7;
+  --button-secondary-hover: #1a1a1a;
+}
