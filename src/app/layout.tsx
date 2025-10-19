@@ -20,11 +20,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "D.Mine - Minecraft сервер",
+    default: "D.Mine - Приватный Minecraft сервер",
     template: "%s | D.Mine",
   },
   description:
-    "Официальный сайт сервера D.Mine - частный Minecraft сервер с уникальными возможностями и дружелюбным сообществом",
+    "Официальный сайт сервера D.Mine - приватный Minecraft сервер с уникальными возможностями и дружелюбным сообществом",
   keywords: ["minecraft", "сервер", "d.mine", "игра", "выживание", "креатив"],
   authors: [{ name: "D.Mine Team" }],
   creator: "D.Mine",
@@ -45,18 +45,18 @@ export const metadata: Metadata = {
     locale: "ru_RU",
     url: "https://d-mine.net",
     siteName: "D.Mine",
-    title: "D.Mine - Minecraft сервер",
+    title: "D.Mine - Приватный Minecraft сервер",
     description:
-      "Официальный сайт сервера D.Mine - частный Minecraft сервер с уникальными возможностями",
+      "Официальный сайт сервера D.Mine - приватный Minecraft сервер с уникальными возможностями",
   },
   alternates: {
     canonical: "https://d-mine.net",
   },
   twitter: {
     card: "summary_large_image",
-    title: "D.Mine - Minecraft сервер",
+    title: "D.Mine - Приватный Minecraft сервер",
     description:
-      "Официальный сайт сервера D.Mine - частный Minecraft сервер с уникальными возможностями",
+      "Официальный сайт сервера D.Mine - приватный Minecraft сервер с уникальными возможностями",
   },
   verification: {
     google:
@@ -110,7 +110,7 @@ export default function RootLayout({
             name: "D.Mine",
             url: "https://d-mine.net",
             description:
-              "Официальный сайт сервера D.Mine - частный Minecraft сервер",
+              "Официальный сайт сервера D.Mine - приватный Minecraft сервер",
           }}
         />
         <StructuredData
@@ -118,7 +118,8 @@ export default function RootLayout({
           data={{
             name: "D.Mine",
             url: "https://d-mine.net",
-            description: "Частный Minecraft сервер с уникальными возможностями",
+            description:
+              "Приватный Minecraft сервер с уникальными возможностями",
             socialLinks: ["https://t.me/dminenet"],
           }}
         />

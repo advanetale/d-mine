@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const homeMetadata: Metadata = {
-  title: "D.Mine - Minecraft сервер",
+  title: "D.Mine - Приватный Minecraft сервер",
   description:
-    "Официальный сайт сервера D.Mine - частный Minecraft сервер с уникальными возможностями и дружелюбным сообществом",
+    "Официальный сайт сервера D.Mine - приватный Minecraft сервер с уникальными возможностями и дружелюбным сообществом",
   keywords: ["minecraft", "сервер", "d.mine", "игра", "выживание", "креатив"],
   robots: {
     index: true,
@@ -14,9 +14,9 @@ export const homeMetadata: Metadata = {
     },
   },
   openGraph: {
-    title: "D.Mine - Minecraft сервер",
+    title: "D.Mine - Приватный Minecraft сервер",
     description:
-      "Официальный сайт сервера D.Mine - частный Minecraft сервер с уникальными возможностями",
+      "Официальный сайт сервера D.Mine - приватный Minecraft сервер с уникальными возможностями",
     url: "https://d-mine.net",
     siteName: "D.Mine",
     type: "website",

@@ -32,7 +32,7 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
           "@type": "Organization",
           name: data.name || "D.Mine",
           url: data.url || "https://d-mine.net",
-          description: data.description || "Частный Minecraft сервер",
+          description: data.description || "Приватный Minecraft сервер",
           sameAs: data.socialLinks || [],
         };
 
