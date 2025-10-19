@@ -43,11 +43,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ru_RU",
-    url: "https://d-mine.net", // Замените на ваш домен
+    url: "https://d-mine.net",
     siteName: "D.Mine",
     title: "D.Mine - Minecraft сервер",
     description:
       "Официальный сайт сервера D.Mine - частный Minecraft сервер с уникальными возможностями",
+  },
+  alternates: {
+    canonical: "https://d-mine.net",
   },
   twitter: {
     card: "summary_large_image",
@@ -56,7 +59,8 @@ export const metadata: Metadata = {
       "Официальный сайт сервера D.Mine - частный Minecraft сервер с уникальными возможностями",
   },
   verification: {
-    // google: 'your-google-verification-code', // Добавьте после регистрации в Google Search Console
+    google:
+      "google-site-verification=YDZTwn11g0cdeU4iVOFM9E_y07AQJzwsoEdtXQJWhcE", // Получите код в Google Search Console
     // yandex: 'your-yandex-verification-code', // Добавьте после регистрации в Яндекс.Вебмастер
   },
 };
