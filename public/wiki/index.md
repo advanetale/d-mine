@@ -48,4 +48,4 @@
 
 - [Правила сервера](https://d-mine-website.vercel.app/rules)
 - [Поддержка](https://t.me/dmine_support)
-- [Boosty для донатов](https://boosty.to/d-mine)
+- [Boosty](https://boosty.to/d-mine)
