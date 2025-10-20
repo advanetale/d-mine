@@ -13,7 +13,8 @@ export default function Home() {
       <main className={`${styles.main} container`}>
         <h1 className={styles.title}>D.Mine</h1>
         <p className={styles.subtitle}>
-          Приватный сервер с уникальными элементами выживания
+          Приватный сервер Minecraft
+          Открытие 08.11.25
         </p>
         <div className={styles.version}>Версия 1.21.10</div>
 
