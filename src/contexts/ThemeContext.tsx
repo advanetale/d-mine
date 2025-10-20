@@ -22,7 +22,7 @@ export const useTheme = () => {
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("dark");
   const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
@@ -42,10 +42,11 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
         initialTheme = savedTheme;
         document.documentElement.setAttribute("data-theme", savedTheme);
       } else {
-        // Если нет сохраненной темы, используем системную
-        initialTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light";
+        // Если нет сохраненной темы, используем темную по умолчанию, но проверяем системную
+        initialTheme = window.matchMedia("(prefers-color-scheme: light)")
+          .matches
+          ? "light"
+          : "dark";
         document.documentElement.setAttribute("data-theme", initialTheme);
       }
     }

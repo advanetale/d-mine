@@ -159,22 +159,22 @@ export default function RootLayout({
                 try {
                   // Получаем сохраненную тему из localStorage
                   var savedTheme = localStorage.getItem('theme');
-                  var theme = 'light';
+                  var theme = 'dark'; // По умолчанию темная тема
                   
                   if (savedTheme === 'dark' || savedTheme === 'light') {
                     theme = savedTheme;
                   } else {
-                    // Если нет сохраненной темы, проверяем системную
-                    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                      theme = 'dark';
+                    // Если нет сохраненной темы, проверяем системную, но по умолчанию темная
+                    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                      theme = 'light';
                     }
                   }
                   
                   // Применяем тему сразу
                   document.documentElement.setAttribute('data-theme', theme);
                 } catch (e) {
-                  // Fallback на светлую тему при ошибке
-                  document.documentElement.setAttribute('data-theme', 'light');
+                  // Fallback на темную тему при ошибке
+                  document.documentElement.setAttribute('data-theme', 'dark');
                 }
               })();
             `,

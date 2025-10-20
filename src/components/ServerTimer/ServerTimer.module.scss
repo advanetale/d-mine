@@ -1,0 +1,116 @@
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--plaque-bg);
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--foreground);
+  opacity: 0.8;
+  margin: 0;
+  text-align: center;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.timeBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 50px;
+}
+
+.number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  line-height: 1;
+}
+
+.label {
+  font-size: 0.7rem;
+  color: var(--foreground);
+  opacity: 0.7;
+  margin-top: 0.2rem;
+  text-transform: lowercase;
+  font-weight: 500;
+}
+
+.separator {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  opacity: 0.5;
+  margin: 0 0.2rem;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 0.5;
+  }
+  51%,
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 768px) {
+  .timer {
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .countdown {
+    gap: 0.3rem;
+  }
+
+  .timeBlock {
+    min-width: 40px;
+  }
+
+  .number {
+    font-size: 1.4rem;
+  }
+
+  .label {
+    font-size: 0.6rem;
+  }
+
+  .separator {
+    font-size: 1.2rem;
+    margin: 0 0.1rem;
+  }
+}
