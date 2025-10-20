@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import GoogleAnalytics from "@/components/GoogleAnalytics/GoogleAnalytics";
 import StructuredData from "@/components/StructuredData/StructuredData";
+import GameServerStructuredData from "@/components/GameServerStructuredData";
 import "./globals.scss";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import Header from "@/components/Header/Header";
@@ -20,12 +21,33 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "D.Mine - Приватный Minecraft сервер",
-    template: "%s | D.Mine",
+    default: "D.Mine - Приватный Minecraft сервер | Майнкрафт сервер | Дмайн",
+    template: "%s | D.Mine - Майнкрафт сервер",
   },
   description:
-    "Официальный сайт сервера D.Mine - приватный Minecraft сервер с уникальными возможностями и дружелюбным сообществом",
-  keywords: ["minecraft", "сервер", "d.mine", "игра", "выживание", "креатив"],
+    "D.Mine - лучший приватный Minecraft сервер в России. Майнкрафт сервер с уникальными возможностями, дружелюбным сообществом и стабильной работой. Присоединяйтесь к Дмайн майнкрафт серверу!",
+  keywords: [
+    "minecraft",
+    "майнкрафт",
+    "сервер",
+    "приватный сервер",
+    "minecraft сервер",
+    "майнкрафт сервер",
+    "приватный сервер майнкрафт",
+    "d.mine",
+    "дмайн",
+    "дмайн майнкрафт сервер",
+    "d mine",
+    "игра",
+    "выживание",
+    "выживание на острове",
+    "русский minecraft сервер",
+    "лучший майнкрафт сервер",
+    "стабильный minecraft сервер",
+    "minecraft server",
+    "приватный майнкрафт",
+    "закрытый сервер майнкрафт",
+  ],
   authors: [{ name: "D.Mine Team" }],
   creator: "D.Mine",
   publisher: "D.Mine",
@@ -44,24 +66,46 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ru_RU",
     url: "https://d-mine.net",
-    siteName: "D.Mine",
-    title: "D.Mine - Приватный Minecraft сервер",
+    siteName: "D.Mine - Майнкрафт сервер",
+    title:
+      "D.Mine - Лучший приватный Minecraft сервер | Дмайн майнкрафт сервер",
     description:
-      "Официальный сайт сервера D.Mine - приватный Minecraft сервер с уникальными возможностями",
+      "D.Mine - приватный Minecraft сервер с уникальными возможностями. Стабильный майнкрафт сервер для игры с друзьями. Присоединяйтесь к Дмайн!",
   },
   alternates: {
     canonical: "https://d-mine.net",
+    languages: {
+      "ru-RU": "https://d-mine.net",
+      ru: "https://d-mine.net",
+    },
   },
   twitter: {
     card: "summary_large_image",
-    title: "D.Mine - Приватный Minecraft сервер",
+    title:
+      "D.Mine - Лучший приватный Minecraft сервер | Дмайн майнкрафт сервер",
     description:
-      "Официальный сайт сервера D.Mine - приватный Minecraft сервер с уникальными возможностями",
+      "D.Mine - приватный Minecraft сервер с уникальными возможностями. Стабильный майнкрафт сервер для игры с друзьями.",
   },
   verification: {
     google:
       "google-site-verification=YDZTwn11g0cdeU4iVOFM9E_y07AQJzwsoEdtXQJWhcE", // Получите код в Google Search Console
     // yandex: 'your-yandex-verification-code', // Добавьте после регистрации в Яндекс.Вебмастер
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any", type: "image/x-icon" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    other: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        url: "/favicon.ico",
+      },
+    ],
   },
 };
 
@@ -73,6 +117,41 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <head>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#8b5cf6" />
+        <meta name="msapplication-TileColor" content="#8b5cf6" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        <meta
+          name="application-name"
+          content="Приватный Майнкрафт сервер - D.Mine"
+        />
+        <meta name="apple-mobile-web-app-title" content="D.Mine" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="referrer" content="origin-when-cross-origin" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="supported-color-schemes" content="light dark" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -107,21 +186,29 @@ export default function RootLayout({
         <StructuredData
           type="website"
           data={{
-            name: "D.Mine",
+            name: "D.Mine - Приватный Minecraft сервер",
             url: "https://d-mine.net",
             description:
-              "Официальный сайт сервера D.Mine - приватный Minecraft сервер",
+              "D.Mine - лучший приватный Minecraft сервер в России. Майнкрафт сервер с уникальными возможностями и стабильной работой.",
+            keywords:
+              "minecraft, майнкрафт, сервер, приватный сервер майнкрафт, дмайн, d.mine",
           }}
         />
         <StructuredData
           type="organization"
           data={{
-            name: "D.Mine",
+            name: "D.Mine - Майнкрафт сервер",
             url: "https://d-mine.net",
             description:
-              "Приватный Minecraft сервер с уникальными возможностями",
+              "Приватный Minecraft сервер с уникальными возможностями, дружелюбным сообществом и стабильной работой",
             socialLinks: ["https://t.me/dminenet"],
           }}
+        />
+        <GameServerStructuredData
+          serverName="D.Mine - Лучший приватный Minecraft сервер"
+          serverUrl="https://d-mine.net"
+          description="D.Mine - приватный Minecraft сервер №1 в России! Стабильный майнкрафт сервер с уникальными возможностями, дружелюбным сообществом и отличной производительностью."
+          gameType="Survival, Creative, Adventure"
         />
         <BackgroundVideo />
         <ThemeProvider>

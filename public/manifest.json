@@ -1,0 +1,31 @@
+{
+  "name": "Приватный Minecraft сервер - D.Mine",
+  "short_name": "D.Mine",
+  "description": "D.Mine - приватный Minecraft сервер про выживание на острове. Стабильный приватный майнкрафт сервер с уникальными возможностями",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#8b5cf6",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    }
+  ]
+}
