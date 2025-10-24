@@ -54,9 +54,11 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
@@ -71,6 +73,14 @@ export const metadata: Metadata = {
       "D.Mine - Лучший приватный Minecraft сервер | Дмайн майнкрафт сервер",
     description:
       "D.Mine - приватный Minecraft сервер с уникальными возможностями. Стабильный майнкрафт сервер для игры с друзьями. Присоединяйтесь к Дмайн!",
+    images: [
+      {
+        url: "https://d-mine.net/apple-touch-icon.png",
+        width: 180,
+        height: 180,
+        alt: "D.Mine - Приватный Minecraft сервер",
+      },
+    ],
   },
   alternates: {
     canonical: "https://d-mine.net",
@@ -93,18 +103,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any", type: "image/x-icon" },
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-    other: [
-      {
-        rel: "icon",
-        type: "image/x-icon",
-        url: "/favicon.ico",
-      },
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
 };
@@ -117,25 +122,6 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <head>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#8b5cf6" />
         <meta name="msapplication-TileColor" content="#8b5cf6" />
