@@ -33,6 +33,7 @@ export default function WikiNavigation({
         pageMap.get("main-world"),
         pageMap.get("farm-world"),
         pageMap.get("trading"),
+        pageMap.get("map-art"),
       ].filter(Boolean) as WikiPage[],
     },
     {
