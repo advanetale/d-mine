@@ -44,6 +44,7 @@ export default function WikiNavigation({
         pageMap.get("skin-change"),
         pageMap.get("colored-nick"),
         pageMap.get("badges"),
+        pageMap.get("armorstand"),
       ].filter(Boolean) as WikiPage[],
     },
   ];
