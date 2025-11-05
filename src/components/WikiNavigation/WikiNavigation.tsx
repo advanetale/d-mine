@@ -40,8 +40,8 @@ export default function WikiNavigation({
       title: "Игровые возможности",
       pages: [
         pageMap.get("crafts"),
+        pageMap.get("fishing"),
         pageMap.get("skin-change"),
-        pageMap.get("pets"),
         pageMap.get("colored-nick"),
         pageMap.get("badges"),
       ].filter(Boolean) as WikiPage[],
