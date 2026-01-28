@@ -1,17 +1,12 @@
 import { MetadataRoute } from "next";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://d-mine.net";
+export const dynamic = "force-static";
 
-  // Только главная страница для индексации
-  const staticPages = [
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
     {
-      url: baseUrl,
+      url: "https://d-mine.net",
       lastModified: new Date(),
-      changeFrequency: "weekly" as const,
-      priority: 1,
     },
   ];
-
-  return staticPages;
 }
