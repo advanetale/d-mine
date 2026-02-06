@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: "https://d-mine.net",
-      lastModified: now,
+      lastModified: now(),
       changeFrequency: "always",
       priority: 1,
     },
