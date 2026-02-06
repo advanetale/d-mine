@@ -1,7 +1,7 @@
 "use client";
 import styles from "./page.module.scss";
 import { useState } from "react";
-import { SiBoosty, SiTwitch } from "react-icons/si";
+import { SiTelegram, SiTwitch } from "react-icons/si";
 import { MdSupportAgent } from "react-icons/md";
 
 export default function Entrance() {
@@ -19,13 +19,13 @@ export default function Entrance() {
             type="button"
             role="tab"
             aria-selected={!isTwitch}
-            className={`${styles.tab} ${styles.tabBoosty} ${
+            className={`${styles.tab} ${styles.tabTelegram} ${
               !isTwitch ? styles.tabActive : ""
             }`}
             onClick={() => setTwitch(false)}
           >
-            <SiBoosty aria-hidden size={18} />
-            <span>Boosty</span>
+            <SiTelegram aria-hidden size={18} />
+            <span>Telegram</span>
           </button>
           <button
             type="button"
@@ -85,34 +85,34 @@ export default function Entrance() {
             </div>
           </section>
         ) : (
-          <section className={styles.card} aria-labelledby="boosty-title">
-            <h1 id="boosty-title" className={styles.title}>
-              Проходка через подписку Boosty
+          <section className={styles.card} aria-labelledby="Telegram-title">
+            <h1 id="Telegram-title" className={styles.title}>
+              Проходка через подписку Telegram
             </h1>
             <p className={styles.subtitle}>
-              Оформите подписку на Boosty нашего сервера — после оплаты вас
+              Оформите подписку на Telegram нашего сервера — после оплаты вас
               добавят в белый список в течение 2-ух часов.
             </p>
             <ol className={styles.steps}>
               <li>
-                Перейдите на наш Boosty и выберите уровень подписки «Проходка на
+                Перейдите на наш Telegram и выберите уровень подписки «Проходка на
                 сервер».
               </li>
               <li>Завершите оплату удобным способом.</li>
               <li>
                 После оплаты вам придет пригласительное письмо в личные
-                сообщения Boosty. Напишите нам в личные сообщения свой
+                сообщения Telegram. Напишите нам в личные сообщения свой
                 действительный никнейм Minecraft или обратитесь в поддержку.
               </li>
             </ol>
             <div className={styles.actions}>
               <a
-                className={`${styles.cta} ${styles.ctaBoosty}`}
-                href="https://boosty.to/d-mine"
+                className={`${styles.cta} ${styles.ctaTelegram}`}
+                href="https://Telegram.to/d-mine"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <SiBoosty aria-hidden /> Перейти на Boosty
+                <SiTelegram aria-hidden /> Перейти на Telegram
               </a>
               <a
                 className={styles.cta}
