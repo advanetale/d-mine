@@ -1,11 +1,11 @@
 "use client";
 import styles from "./page.module.scss";
 import { useState } from "react";
-import { SiTelegram, SiTwitch } from "react-icons/si";
+import { SiTelegram, SiBoosty } from "react-icons/si";
 import { MdSupportAgent } from "react-icons/md";
 
 export default function Entrance() {
-  const [isTwitch, setTwitch] = useState(false);
+  const [isBoosty, setBoosty] = useState(false);
 
   return (
     <div className={styles.page}>
@@ -13,16 +13,16 @@ export default function Entrance() {
         <div
           className={styles.tabs}
           role="tablist"
-          aria-label="Выбор способа оплаты"
+          aria-label="Cпособ проходки"
         >
           <button
             type="button"
             role="tab"
-            aria-selected={!isTwitch}
+            aria-selected={!isBoosty}
             className={`${styles.tab} ${styles.tabTelegram} ${
-              !isTwitch ? styles.tabActive : ""
+              !isBoosty ? styles.tabActive : ""
             }`}
-            onClick={() => setTwitch(false)}
+            onClick={() => setBoosty(false)}
           >
             <SiTelegram aria-hidden size={18} />
             <span>Telegram</span>
@@ -30,21 +30,21 @@ export default function Entrance() {
           <button
             type="button"
             role="tab"
-            aria-selected={isTwitch}
-            className={`${styles.tab} ${styles.tabTwitch} ${
-              isTwitch ? styles.tabActive : ""
+            aria-selected={isBoosty}
+            className={`${styles.tab} ${styles.tabBoosty} ${
+              isBoosty ? styles.tabActive : ""
             }`}
-            onClick={() => setTwitch(true)}
+            onClick={() => setBoosty(true)}
           >
-            <SiTwitch aria-hidden size={18} />
-            <span>Twitch</span>
+            <SiBoosty aria-hidden size={18} />
+            <span>Boosty</span>
           </button>
         </div>
 
-        {isTwitch ? (
-          <section className={styles.card} aria-labelledby="twitch-title">
-            <h1 id="twitch-title" className={styles.title}>
-              Проходка через баллы канала Twitch
+        {isBoosty ? (
+          <section className={styles.card} aria-labelledby="Boosty-title">
+            <h1 id="Boosty-title" className={styles.title}>
+              Проходка через Boosty
             </h1>
             <p className={styles.subtitle}>
               Обменяй баллы канала владельца сервера на проходку. Обычно
@@ -52,27 +52,23 @@ export default function Entrance() {
             </p>
             <ol className={styles.steps}>
               <li>
-                Перейдите на канал владельца сервера и убедись, что идёт
-                трансляция.
+                Перейдите на Boosty.
               </li>
               <li>
-                Накопите нужное количество баллов канала и выкупите награду
-                «Проходка на сервер».
+                Приобретите подписку "Проходка на сервер".
               </li>
               <li>
-                Не забудьте указать свой ник при приобретении проходки этим
-                способом, а так же пришлите скрин с подтверждением приобретения
-                в поддержку для добавления в белый список.
+                Не забудьте указать свой ник в личные сообщения Boosty при приобретении проходки этим способом.
               </li>
             </ol>
             <div className={styles.actions}>
               <a
-                className={`${styles.cta} ${styles.ctaTwitch}`}
-                href="https://www.twitch.tv/pirozxhok"
+                className={`${styles.cta} ${styles.ctaBoosty}`}
+                href="https://boosty.to/pirozxhok"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <SiTwitch aria-hidden /> Перейти на Twitch
+                <SiBoosty aria-hidden /> Перейти на Boosty
               </a>
               <a
                 className={styles.cta}
@@ -87,28 +83,26 @@ export default function Entrance() {
         ) : (
           <section className={styles.card} aria-labelledby="Telegram-title">
             <h1 id="Telegram-title" className={styles.title}>
-              Проходка через подписку Telegram
+              Проходка через анкету в Telegram
             </h1>
             <p className={styles.subtitle}>
-              Оформите подписку на Telegram нашего сервера — после оплаты вас
+              После одобрения вашей заявки, Вас
               добавят в белый список в течение 2-ух часов.
             </p>
             <ol className={styles.steps}>
               <li>
-                Перейдите на наш Telegram и выберите уровень подписки «Проходка на
-                сервер».
+                Перейдите к поддержке сервера в Telegram.
               </li>
-              <li>Завершите оплату удобным способом.</li>
+              <li>Напишите свою анкету в поддержку сервера.</li>
               <li>
-                После оплаты вам придет пригласительное письмо в личные
-                сообщения Telegram. Напишите нам в личные сообщения свой
-                действительный никнейм Minecraft или обратитесь в поддержку.
+                Анкета должна быть оформлена следующим способом:
+                
               </li>
             </ol>
             <div className={styles.actions}>
               <a
                 className={`${styles.cta} ${styles.ctaTelegram}`}
-                href="https://Telegram.to/d-mine"
+                href="https://t.me/dmine_support"
                 target="_blank"
                 rel="noopener noreferrer"
               >
