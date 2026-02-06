@@ -20,7 +20,7 @@ export default function Home() {
 
         <div className={styles.actions}>
           <Link href="/pass">
-            <Button size="large">Приобрести проходку</Button>
+            <Button size="large">Подать заявку</Button>
           </Link>
           <CopyIPButton ip={serverIP} />
         </div>
