@@ -6,7 +6,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "О сервере",
   description:
-    "D.Mine — приватный сервер Minecraft с уникальной системой выживания на острове. Кастомные рецепты, экономика, дружелюбное сообщество.",
+    "D.Mine — бесплатный приватный сервер Minecraft с уникальными инновациями.",
   robots: {
     index: false,
     follow: false,
@@ -15,12 +15,12 @@ export const metadata: Metadata = {
 
 export default async function About() {
   const serverFeatures = [
-    "Уникальная система выживания на острове",
-    "Кастомные рецепты крафта",
-    "Система экономики и торговли",
+    "Смена времён года",
+    "Новая генерация мира",
+    "Измененная система торговли",
     "Дружелюбное сообщество",
-    "Разделенные миры выживания и ферм",
-    "Удобное лобби для перехода между мирами",
+    "Отдельный мир под мап-арты",
+    "Полноценный сюжет",
   ];
 
   const serverImages: CarouselImage[] = await getAboutImages();
@@ -37,26 +37,25 @@ export default async function About() {
         <section className={styles.hero}>
           <h1 className={styles.title}>О сервере D.Mine</h1>
           <p className={styles.subtitle}>
-            Приватный сервер выживания на острове с уникальными механиками
+            Бесплатный приватный сервер выживания с уникальными механиками
           </p>
         </section>
 
         {/* Описание сервера */}
         <section className={styles.description}>
           <h2 className={styles.sectionTitle}>
-            Добро пожаловать на остров выживания!
+            Добро пожаловать!
           </h2>
           <p>
-            D.Mine — это приватный сервер Minecraft, где вас ждет увлекательное
-            приключение на загадочном острове. Каждый игрок начинает с чистого
-            листа, открывая неизведанные земли, собирая ресурсы и создавая
-            огромные проекты вместе.
+            D.Mine — это бесплатный приватный сервер Minecraft, где вас ждет увлекательное
+            приключение в загадочном мире, где каждый имеет свою роль. Вас ждёт измененная генерация мира,
+            новые механики, полноценный сюжет и многое другое!
           </p>
           <p>
             Наш сервер предлагает сбалансированный геймплей, где важны как
             личные навыки, так и взаимодействие с другими игроками.
             Присоединяйтесь к нашему дружному сообществу и создайте свою историю
-            на острове!
+            на D.Mine!
           </p>
         </section>
 
@@ -85,7 +84,7 @@ export default async function About() {
           <div className={styles.infoGrid}>
             <div className={styles.infoItem}>
               <strong>Версия Minecraft:</strong>
-              <span>1.21.10</span>
+              <span>1.21.11</span>
             </div>
             <div className={styles.infoItem}>
               <strong>IP адрес:</strong>
