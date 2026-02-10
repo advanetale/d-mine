@@ -105,15 +105,7 @@ export default function Entrance() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <SiTelegram aria-hidden /> Перейти на Telegram
-              </a>
-              <a
-                className={styles.cta}
-                href="https://t.me/dmine_support"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MdSupportAgent aria-hidden /> Перейти к поддержке
+                <SiTelegram aria-hidden /> Перейти в Telegram
               </a>
             </div>
           </section>
