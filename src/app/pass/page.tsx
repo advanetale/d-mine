@@ -64,7 +64,7 @@ export default function Entrance() {
             <div className={styles.actions}>
               <a
                 className={`${styles.cta} ${styles.ctaBoosty}`}
-                href="https://boosty.to/pirozxhok"
+                href="https://boosty.to/d-mine"
                 target="_blank"
                 rel="noopener noreferrer"
               >
