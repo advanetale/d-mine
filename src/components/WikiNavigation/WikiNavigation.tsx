@@ -40,7 +40,7 @@ export default function WikiNavigation({
       title: "Игровые возможности",
       pages: [
         pageMap.get("crafts"),
-        pageMap.get("season")
+        pageMap.get("season"),
         pageMap.get("fishing"),
         pageMap.get("skin-change"),
         pageMap.get("colored-nick"),
