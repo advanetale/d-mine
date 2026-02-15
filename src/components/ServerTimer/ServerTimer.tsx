@@ -54,7 +54,7 @@ export function ServerTimer() {
   if (isExpired) {
     return (
       <div className={styles.timer}>
-        <div className={styles.title}>Анонс 2 сезона уже скоро!</div>
+        <div className={styles.title}>Набор на 2 сезон открыт!</div>
       </div>
     );
   }
