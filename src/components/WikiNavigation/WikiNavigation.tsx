@@ -42,6 +42,7 @@ export default function WikiNavigation({
         pageMap.get("crafts"),
         pageMap.get("season"),
         pageMap.get("fishing"),
+        pageMap.get("points"),
         pageMap.get("skin-change"),
         pageMap.get("colored-nick"),
         pageMap.get("badges"),
