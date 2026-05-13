@@ -1,11 +1,13 @@
 "use client";
 import styles from "./page.module.scss";
 import { useState } from "react";
-import { SiTelegram, SiBoosty } from "react-icons/si";
+import { SiTelegram, SiBoosty, SiVk } from "react-icons/si";
 import { MdSupportAgent } from "react-icons/md";
 
+type TabType = "telegram" | "boosty" | "vk";
+
 export default function Entrance() {
-  const [isBoosty, setBoosty] = useState(false);
+  const [activeTab, setActiveTab] = useState<TabType>("telegram");
 
   return (
     <div className={styles.page}>
@@ -13,16 +15,16 @@ export default function Entrance() {
         <div
           className={styles.tabs}
           role="tablist"
-          aria-label="Cпособ проходки"
+          aria-label="Способы проходки"
         >
           <button
             type="button"
             role="tab"
-            aria-selected={!isBoosty}
+            aria-selected={activeTab === "telegram"}
             className={`${styles.tab} ${styles.tabTelegram} ${
-              !isBoosty ? styles.tabActive : ""
+              activeTab === "telegram" ? styles.tabActive : ""
             }`}
-            onClick={() => setBoosty(false)}
+            onClick={() => setActiveTab("telegram")}
           >
             <SiTelegram aria-hidden size={18} />
             <span>Telegram</span>
@@ -30,18 +32,30 @@ export default function Entrance() {
           <button
             type="button"
             role="tab"
-            aria-selected={isBoosty}
+            aria-selected={activeTab === "boosty"}
             className={`${styles.tab} ${styles.tabBoosty} ${
-              isBoosty ? styles.tabActive : ""
+              activeTab === "boosty" ? styles.tabActive : ""
             }`}
-            onClick={() => setBoosty(true)}
+            onClick={() => setActiveTab("boosty")}
           >
             <SiBoosty aria-hidden size={18} />
             <span>Boosty</span>
           </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={activeTab === "vk"}
+            className={`${styles.tab} ${styles.tabVk} ${
+              activeTab === "vk" ? styles.tabActive : ""
+            }`}
+            onClick={() => setActiveTab("vk")}
+          >
+            <SiVk aria-hidden size={18} />
+            <span>VK</span>
+          </button>
         </div>
 
-        {isBoosty ? (
+        {activeTab === "boosty" && (
           <section className={styles.card} aria-labelledby="Boosty-title">
             <h1 id="Boosty-title" className={styles.title}>
               Проходка через Boosty
@@ -50,14 +64,11 @@ export default function Entrance() {
               Приобретайте проходку через Boosty.
             </p>
             <ol className={styles.steps}>
+              <li>Перейдите на Boosty.</li>
+              <li>Приобретите подписку (Проходка на сервер).</li>
               <li>
-                Перейдите на Boosty.
-              </li>
-              <li>
-                Приобретите подписку (Проходка на сервер).
-              </li>
-              <li>
-                Не забудьте указать свой ник в личные сообщения Boosty при приобретении проходки этим способом.
+                Не забудьте указать свой ник в личные сообщения Boosty при
+                приобретении проходки этим способом.
               </li>
             </ol>
             <div className={styles.actions}>
@@ -78,27 +89,24 @@ export default function Entrance() {
                 <MdSupportAgent aria-hidden /> Перейти к поддержке
               </a>
             </div>
-          </section>    
-        ) : (
+          </section>
+        )}
+
+        {activeTab === "telegram" && (
           <section className={styles.card} aria-labelledby="Telegram-title">
             <h1 id="Telegram-title" className={styles.title}>
               Проходка через анкету в Telegram
             </h1>
             <p className={styles.subtitle}>
-              Отправьте свою заявку в поддержку сервера. После одобрения Вас добавят в течение 2-ух часов. Анкета должна быть оформлена следующим способом:
+              Отправьте свою заявку в поддержку сервера. После одобрения Вас
+              добавят в течение 2-ух часов. Анкета должна быть оформлена
+              следующим способом:
             </p>
             <ol className={styles.steps}>
-              <li>
-                Ваш никнейм.
-              </li>
+              <li>Ваш никнейм.</li>
               <li>Расскажите о себе.</li>
-              <li>
-                Имеется ли у вас лицензия Minecraft? (Да/Нет)
-              </li>
-              <li>
-                Прикрепите фотографию своего скина.
-                
-              </li>
+              <li>Имеется ли у вас лицензия Minecraft? (Да/Нет)</li>
+              <li>Прикрепите фотографию своего скина.</li>
             </ol>
             <div className={styles.actions}>
               <a
@@ -108,6 +116,42 @@ export default function Entrance() {
                 rel="noopener noreferrer"
               >
                 <SiTelegram aria-hidden /> Перейти в Telegram
+              </a>
+            </div>
+          </section>
+        )}
+
+        {activeTab === "vk" && (
+          <section className={styles.card} aria-labelledby="VK-title">
+            <h1 id="VK-title" className={styles.title}>
+              Проходка через анкету в ВКонтакте
+            </h1>
+            <p className={styles.subtitle}>
+              Отправьте заявку в сообщество. После проверки вас добавят в
+              течение суток. Оформите заявку по следующему шаблону:
+            </p>
+            <ol className={styles.steps}>
+              <li>Ваш никнейм в Minecraft.</li>
+              <li>Краткая информация о себе.</li>
+              <li>Есть ли у вас лицензия Minecraft? (Да/Нет)</li>
+              <li>Прикрепите скриншот вашего скина.</li>
+            </ol>
+            <div className={styles.actions}>
+              <a
+                className={`${styles.cta} ${styles.ctaVk}`}
+                href="https://vk.com/dminenet"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SiVk aria-hidden /> Перейти в ВК
+              </a>
+              <a
+                className={styles.cta}
+                href="https://t.me/dmine_support"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MdSupportAgent aria-hidden /> Перейти к поддержке
               </a>
             </div>
           </section>
