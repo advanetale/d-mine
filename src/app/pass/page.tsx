@@ -80,6 +80,38 @@ export default function Entrance() {
             </div>
           </section>
         ) : (
+          <section className={styles.card} aria-labelledby="VK-title">
+            <h1 id="Telegram-title" className={styles.title}>
+              Проходка через анкету в Telegram
+            </h1>
+            <p className={styles.subtitle}>
+              Отправьте свою заявку в поддержку сервера. После одобрения Вас добавят в течение 2-ух часов. Анкета должна быть оформлена следующим способом:
+            </p>
+            <ol className={styles.steps}>
+              <li>
+                Ваш никнейм.
+              </li>
+              <li>Расскажите о себе.</li>
+              <li>
+                Имеется ли у вас лицензия Minecraft? (Да/Нет)
+              </li>
+              <li>
+                Прикрепите фотографию своего скина.
+                
+              </li>
+            </ol>
+            <div className={styles.actions}>
+              <a
+                className={`${styles.cta} ${styles.ctaVK}`}
+                href="https://t.me/dmine_support1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SiTelegram aria-hidden /> Перейти в Telegram
+              </a>
+            </div>
+          </section>      
+        ) : (
           <section className={styles.card} aria-labelledby="Telegram-title">
             <h1 id="Telegram-title" className={styles.title}>
               Проходка через анкету в Telegram
