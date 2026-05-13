@@ -98,7 +98,7 @@ export default function Entrance() {
               Проходка через анкету в Telegram
             </h1>
             <p className={styles.subtitle}>
-              Отправьте свою заявку в поддержку сервера. После одобрения Вас
+              Отправьте свою заявку в поддержку сервера. Заявка рассматривается максимум три дня. После одобрения Вас
               добавят в течение 2-ух часов. Анкета должна быть оформлена
               следующим способом:
             </p>
@@ -106,7 +106,7 @@ export default function Entrance() {
               <li>Ваш никнейм.</li>
               <li>Расскажите о себе.</li>
               <li>Имеется ли у вас лицензия Minecraft? (Да/Нет)</li>
-              <li>Прикрепите фотографию своего скина.</li>
+              <li>Прикрепите скриншот вашего скина.</li>
             </ol>
             <div className={styles.actions}>
               <a
@@ -127,12 +127,12 @@ export default function Entrance() {
               Проходка через анкету в ВКонтакте
             </h1>
             <p className={styles.subtitle}>
-              Отправьте заявку в сообщество. После проверки вас добавят в
-              течение суток. Оформите заявку по следующему шаблону:
+              Отправьте заявку в личные сообщения сообщество. Проверка заявки через ВКонтакте может занять до семи дней. После одобрения Вас
+              добавят в течение 2-ух часов. Оформите заявку по следующему шаблону:
             </p>
             <ol className={styles.steps}>
               <li>Ваш никнейм в Minecraft.</li>
-              <li>Краткая информация о себе.</li>
+              <li>Расскажите о себе.</li>
               <li>Есть ли у вас лицензия Minecraft? (Да/Нет)</li>
               <li>Прикрепите скриншот вашего скина.</li>
             </ol>
@@ -144,14 +144,6 @@ export default function Entrance() {
                 rel="noopener noreferrer"
               >
                 <SiVk aria-hidden /> Перейти в ВК
-              </a>
-              <a
-                className={styles.cta}
-                href="https://t.me/dmine_support"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MdSupportAgent aria-hidden /> Перейти к поддержке
               </a>
             </div>
           </section>
