@@ -16,7 +16,7 @@ export default function Home() {
         <p className={styles.subtitle}>Бесплатный приватный сервер Minecraft</p>
         <ServerTimer />
 
-        <div className={styles.version}>Версия 1.21.11</div>
+        <div className={styles.version}>Версия 1.21.11. Требуется лицензия Minecraft.</div>
 
         <div className={styles.actions}>
           <Link href="/pass">
