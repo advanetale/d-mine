@@ -80,7 +80,7 @@ export default async function About() {
           <div className={styles.infoGrid}>
             <div className={styles.infoItem}>
               <strong>Версия Minecraft:</strong>
-              <span>1.21.11</span>
+              <span>26.2</span>
             </div>
             <div className={styles.infoItem}>
               <strong>IP адрес:</strong>
