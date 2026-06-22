@@ -21,7 +21,7 @@ export function ServerTimer() {
 
   useEffect(() => {
     // Дата открытия сервера: 8 ноября 2025, 15:00 МСК
-    const targetDate = new Date("2026-03-14T15:00:00+03:00");
+    const targetDate = new Date("2026-07-05T15:00:00+03:00");
 
     const updateTimer = () => {
       const now = new Date();
@@ -54,14 +54,14 @@ export function ServerTimer() {
   if (isExpired) {
     return (
       <div className={styles.timer}>
-        <div className={styles.title}>2 сезон открыт!</div>
+        <div className={styles.title}>Межсезонье 1.5.2 открыто!</div>
       </div>
     );
   }
 
   return (
     <div className={styles.timer}>
-      <div className={styles.subtitle}>Открытие 14 марта в 15:00 МСК</div>
+      <div className={styles.subtitle}>До открытие межсезонье 1.5.2</div>
       <div className={styles.countdown}>
         <div className={styles.timeBlock}>
           <div className={styles.number}>{timeLeft.days}</div>
