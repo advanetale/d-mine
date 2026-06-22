@@ -6,7 +6,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "О сервере",
   description:
-    "D.Mine — бесплатный приватный сервер Minecraft с уникальными инновациями.",
+    "D.Mine — бесплатный приватный сервер Minecraft с уникальными механиками.",
   robots: {
     index: false,
     follow: false,
@@ -15,12 +15,9 @@ export const metadata: Metadata = {
 
 export default async function About() {
   const serverFeatures = [
-    "Смена времён года",
-    "Новая генерация мира",
-    "Измененная система торговли",
+    "Уникальные механики",
     "Дружелюбное сообщество",
-    "Отдельный мир под мап-арты",
-    "Полноценный сюжет",
+    "Сюжет в каждом сезоне",
   ];
 
   const serverImages: CarouselImage[] = await getAboutImages();
@@ -37,7 +34,7 @@ export default async function About() {
         <section className={styles.hero}>
           <h1 className={styles.title}>О сервере D.Mine</h1>
           <p className={styles.subtitle}>
-            Бесплатный приватный сервер выживания с уникальными механиками
+            Бесплатный приватный сервер выживания для каждого игрока
           </p>
         </section>
 
@@ -47,8 +44,7 @@ export default async function About() {
             Добро пожаловать!
           </h2>
           <p>
-            D.Mine — это бесплатный приватный сервер Minecraft, где вас ждет увлекательное
-            приключение в загадочном мире, где каждый имеет свою роль. Вас ждёт измененная генерация мира,
+            D.Mine — это бесплатный приватный сервер Minecraft. Вас ждёт измененная генерация мира,
             новые механики, полноценный сюжет и многое другое!
           </p>
           <p>
