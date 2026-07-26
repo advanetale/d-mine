@@ -15,7 +15,10 @@ export const metadata: Metadata = {
 
 export default async function About() {
   const serverFeatures = [
-    "Уникальные механики",
+    "Огромный остров",
+    "Кастомная генерация",
+    "Двойной прыжок",
+    "Отдельный мир для ферм",
     "Дружелюбное сообщество",
     "Сюжет в каждом сезоне",
   ];
