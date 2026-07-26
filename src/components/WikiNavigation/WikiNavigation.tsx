@@ -41,11 +41,11 @@ export default function WikiNavigation({
       pages: [
         pageMap.get("crafts"),
         pageMap.get("points"),
+        pageMap.get("jumpwall"),
         pageMap.get("skin-change"),
         pageMap.get("colored-nick"),
         pageMap.get("badges"),
         pageMap.get("armorstand"),
-        pageMap.get("ball"),
       ].filter(Boolean) as WikiPage[],
     },
   ];
