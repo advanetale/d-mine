@@ -111,7 +111,7 @@ export default function Entrance() {
             <div className={styles.actions}>
               <a
                 className={`${styles.cta} ${styles.ctaTelegram}`}
-                href="https://telegram.me/dmine_support"
+                href="https://t.me/dmine_support"
                 target="_blank"
                 rel="noopener noreferrer"
               >
