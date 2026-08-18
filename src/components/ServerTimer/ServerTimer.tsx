@@ -21,7 +21,7 @@ export function ServerTimer() {
 
   useEffect(() => {
     // Дата открытия сервера: 8 ноября 2025, 15:00 МСК
-    const targetDate = new Date("2026-22-08T15:00:00+03:00");
+    const targetDate = new Date("2026-08-22T15:00:00+03:00");
 
     const updateTimer = () => {
       const now = new Date();
