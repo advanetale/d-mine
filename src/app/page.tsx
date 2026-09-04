@@ -19,9 +19,6 @@ export default function Home() {
         <div className={styles.version}>Версия 26.2. Требуется лицензия Minecraft</div>
 
         <div className={styles.actions}>
-          <Link href="/pass">
-            <Button size="large">Подать заявку</Button>
-          </Link>
           <CopyIPButton ip={serverIP} />
         </div>
       </main>
