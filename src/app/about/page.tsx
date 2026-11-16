@@ -15,12 +15,9 @@ export const metadata: Metadata = {
 
 export default async function About() {
   const serverFeatures = [
-    "Огромный остров",
-    "Кастомная генерация",
-    "Двойной прыжок",
-    "Отдельный мир для ферм",
-    "Дружелюбное сообщество",
-    "Сюжет в каждом сезоне",
+    "Ванильный Minecraft",
+    "Лицензионный сервер",
+    "Бесплатный и для каждого",
   ];
 
   const serverImages: CarouselImage[] = await getAboutImages();
@@ -47,8 +44,7 @@ export default async function About() {
             Добро пожаловать!
           </h2>
           <p>
-            D.Mine — это бесплатный приватный сервер Minecraft. Вас ждёт измененная генерация мира,
-            новые механики, полноценный сюжет и многое другое!
+            D.Mine — это бесплатный лицензионный сервер Minecraft.
           </p>
           <p>
             Наш сервер предлагает сбалансированный геймплей, где важны как
@@ -83,7 +79,7 @@ export default async function About() {
           <div className={styles.infoGrid}>
             <div className={styles.infoItem}>
               <strong>Версия Minecraft:</strong>
-              <span>26.2</span>
+              <span>26.3</span>
             </div>
             <div className={styles.infoItem}>
               <strong>IP адрес:</strong>
@@ -95,7 +91,7 @@ export default async function About() {
             </div>
             <div className={styles.infoItem}>
               <strong>Максимум игроков:</strong>
-              <span>500 человек</span>
+              <span>100 человек</span>
             </div>
             <div className={styles.infoItem}>
               <strong>Время работы:</strong>
