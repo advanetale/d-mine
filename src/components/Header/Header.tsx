@@ -14,7 +14,6 @@ const Header = () => {
   const navItems = [
     { label: "Главная", path: "/" },
     { label: "О сервере", path: "/about" },
-    { label: "Проходка", path: "/pass" },
     { label: "Правила", path: "/rules" },
     { label: "Вики", path: "/wiki" },
   ];
