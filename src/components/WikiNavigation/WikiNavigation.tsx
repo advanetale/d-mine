@@ -31,9 +31,6 @@ export default function WikiNavigation({
       title: "Игровые миры",
       pages: [
         pageMap.get("main-world"),
-        pageMap.get("farm-world"),
-        pageMap.get("trading"),
-        pageMap.get("map-art"),
       ].filter(Boolean) as WikiPage[],
     },
     {
@@ -42,10 +39,8 @@ export default function WikiNavigation({
         pageMap.get("crafts"),
         pageMap.get("points"),
         pageMap.get("jumpwall"),
-        pageMap.get("skin-change"),
         pageMap.get("colored-nick"),
         pageMap.get("badges"),
-        pageMap.get("armorstand"),
       ].filter(Boolean) as WikiPage[],
     },
   ];
