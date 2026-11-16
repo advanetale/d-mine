@@ -13,10 +13,10 @@ export default function Home() {
     <div className={styles.page}>
       <main className={`${styles.main} container`}>
         <h1 className={styles.title}>D.Mine</h1>
-        <p className={styles.subtitle}>Бесплатный приватный сервер Minecraft</p>
+        <p className={styles.subtitle}>Бесплатный ванильный сервер Minecraft</p>
         <ServerTimer />
 
-        <div className={styles.version}>Версия 26.2. Требуется лицензия Minecraft</div>
+        <div className={styles.version}>Версия 26.3. Требуется лицензия Minecraft</div>
 
         <div className={styles.actions}>
           <CopyIPButton ip={serverIP} />
