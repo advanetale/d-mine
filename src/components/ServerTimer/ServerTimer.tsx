@@ -54,14 +54,14 @@ export function ServerTimer() {
   if (isExpired) {
     return (
       <div className={styles.timer}>
-        <div className={styles.title}>3-й сезон открыт!</div>
+        <div className={styles.title}>Копируй IP-адрес и играй!</div>
       </div>
     );
   }
 
   return (
     <div className={styles.timer}>
-      <div className={styles.subtitle}>Набор на 3-й сезон открыт!</div>
+      <div className={styles.subtitle}>Открытие состоится через:</div>
       <div className={styles.countdown}>
         <div className={styles.timeBlock}>
           <div className={styles.number}>{timeLeft.days}</div>
