@@ -41,7 +41,7 @@ const Footer = () => {
               </a>
             </p>
             <p className={styles.copyright}>
-              © 2025 D.Mine. Все права защищены.
+              © 2026 D.Mine. Все права защищены.
             </p>
           </div>
         </div>
