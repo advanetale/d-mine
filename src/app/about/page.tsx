@@ -6,7 +6,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "О сервере",
   description:
-    "D.Mine — бесплатный приватный сервер Minecraft с уникальными механиками.",
+    "D.Mine — бесплатный лицензионный сервер Minecraft.",
   robots: {
     index: false,
     follow: false,
