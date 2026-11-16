@@ -11,7 +11,7 @@ const Footer = () => {
             <div className={styles.mainInfo}>
               <h3 className={styles.projectName}>D.Mine</h3>
               <p className={styles.description}>
-                Частный сервер Minecraft с уникальными возможностями и
+                Лицензионный сервер Minecraft с
                 дружелюбным сообществом
               </p>
             </div>
