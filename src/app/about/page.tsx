@@ -34,7 +34,7 @@ export default async function About() {
         <section className={styles.hero}>
           <h1 className={styles.title}>О сервере D.Mine</h1>
           <p className={styles.subtitle}>
-            Бесплатный приватный сервер выживания для каждого игрока
+            Бесплатный лицензионный сервер выживания для каждого игрока
           </p>
         </section>
 
