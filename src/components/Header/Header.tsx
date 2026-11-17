@@ -14,6 +14,7 @@ const Header = () => {
   const navItems = [
     { label: "Главная", path: "/" },
     { label: "О сервере", path: "/about" },
+    { label: "Донат", path: "https://d-mine.net/wqwq", external: true },
     { label: "Правила", path: "/rules" },
     { label: "Вики", path: "/wiki" },
   ];
@@ -24,6 +25,14 @@ const Header = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+  };
+
+  const isActive = (item: { path: string; external?: boolean }) => {
+    if (item.external) return false;
+    return (
+      pathname === item.path ||
+      (item.path === "/wiki" && pathname.startsWith("/wiki"))
+    );
   };
 
   return (
@@ -47,20 +56,28 @@ const Header = () => {
 
         <div className={styles.navigation}>
           <ul className={styles.navBar}>
-            {navItems.map((item) => (
-              <Link href={item.path} key={item.path}>
-                <li
-                  className={`${styles.navElement} ${
-                    pathname === item.path ||
-                    (item.path === "/wiki" && pathname.startsWith("/wiki"))
-                      ? styles.active
-                      : ""
-                  }`}
+            {navItems.map((item) =>
+              item.external ? (
+                <a
+                  href={item.path}
+                  key={item.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {item.label}
-                </li>
-              </Link>
-            ))}
+                  <li className={styles.navElement}>{item.label}</li>
+                </a>
+              ) : (
+                <Link href={item.path} key={item.path}>
+                  <li
+                    className={`${styles.navElement} ${
+                      isActive(item) ? styles.active : ""
+                    }`}
+                  >
+                    {item.label}
+                  </li>
+                </Link>
+              )
+            )}
           </ul>
           <SocialLinks />
         </div>
@@ -85,20 +102,29 @@ const Header = () => {
             </Link>
           </div>
           <ul className={styles.mobileNavBar}>
-            {navItems.map((item) => (
-              <Link href={item.path} key={item.path} onClick={closeMenu}>
-                <li
-                  className={`${styles.mobileNavElement} ${
-                    pathname === item.path ||
-                    (item.path === "/wiki" && pathname.startsWith("/wiki"))
-                      ? styles.active
-                      : ""
-                  }`}
+            {navItems.map((item) =>
+              item.external ? (
+                <a
+                  href={item.path}
+                  key={item.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={closeMenu}
                 >
-                  {item.label}
-                </li>
-              </Link>
-            ))}
+                  <li className={styles.mobileNavElement}>{item.label}</li>
+                </a>
+              ) : (
+                <Link href={item.path} key={item.path} onClick={closeMenu}>
+                  <li
+                    className={`${styles.mobileNavElement} ${
+                      isActive(item) ? styles.active : ""
+                    }`}
+                  >
+                    {item.label}
+                  </li>
+                </Link>
+              )
+            )}
           </ul>
           <div className={styles.mobileSocialLinks}>
             <SocialLinks />
