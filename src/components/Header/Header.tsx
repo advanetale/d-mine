@@ -14,7 +14,7 @@ const Header = () => {
   const navItems = [
     { label: "Главная", path: "/" },
     { label: "О сервере", path: "/about" },
-    { label: "Донат", path: "https://d-mine.net/wqwq", external: true },
+    { label: "Донат", path: "https://store.d-mine.net/", external: true },
     { label: "Правила", path: "/rules" },
     { label: "Вики", path: "/wiki" },
   ];
