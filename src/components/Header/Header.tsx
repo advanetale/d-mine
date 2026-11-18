@@ -27,14 +27,6 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
-  const isActive = (item: { path: string; external?: boolean }) => {
-    if (item.external) return false;
-    return (
-      pathname === item.path ||
-      (item.path === "/wiki" && pathname.startsWith("/wiki"))
-    );
-  };
-
   return (
     <header className={styles.header}>
       <div className={`container ${styles.content}`}>
@@ -56,28 +48,20 @@ const Header = () => {
 
         <div className={styles.navigation}>
           <ul className={styles.navBar}>
-            {navItems.map((item) =>
-              item.external ? (
-                <a
-                  href={item.path}
-                  key={item.path}
-                  target="_blank"
-                  rel="noopener noreferrer"
+            {navItems.map((item) => (
+              <Link href={item.path} key={item.path}>
+                <li
+                  className={`${styles.navElement} ${
+                    pathname === item.path ||
+                    (item.path === "/wiki" && pathname.startsWith("/wiki"))
+                      ? styles.active
+                      : ""
+                  }`}
                 >
-                  <li className={styles.navElement}>{item.label}</li>
-                </a>
-              ) : (
-                <Link href={item.path} key={item.path}>
-                  <li
-                    className={`${styles.navElement} ${
-                      isActive(item) ? styles.active : ""
-                    }`}
-                  >
-                    {item.label}
-                  </li>
-                </Link>
-              )
-            )}
+                  {item.label}
+                </li>
+              </Link>
+            ))}
           </ul>
           <SocialLinks />
         </div>
@@ -102,29 +86,20 @@ const Header = () => {
             </Link>
           </div>
           <ul className={styles.mobileNavBar}>
-            {navItems.map((item) =>
-              item.external ? (
-                <a
-                  href={item.path}
-                  key={item.path}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={closeMenu}
+            {navItems.map((item) => (
+              <Link href={item.path} key={item.path} onClick={closeMenu}>
+                <li
+                  className={`${styles.mobileNavElement} ${
+                    pathname === item.path ||
+                    (item.path === "/wiki" && pathname.startsWith("/wiki"))
+                      ? styles.active
+                      : ""
+                  }`}
                 >
-                  <li className={styles.mobileNavElement}>{item.label}</li>
-                </a>
-              ) : (
-                <Link href={item.path} key={item.path} onClick={closeMenu}>
-                  <li
-                    className={`${styles.mobileNavElement} ${
-                      isActive(item) ? styles.active : ""
-                    }`}
-                  >
-                    {item.label}
-                  </li>
-                </Link>
-              )
-            )}
+                  {item.label}
+                </li>
+              </Link>
+            ))}
           </ul>
           <div className={styles.mobileSocialLinks}>
             <SocialLinks />
