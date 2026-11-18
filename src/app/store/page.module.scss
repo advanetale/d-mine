@@ -1,0 +1,199 @@
+.page {
+  min-height: 100vh;
+  padding-top: 0;
+  font-family: var(--font-geist-sans);
+}
+
+.main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 120px 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.hero {
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  color: var(--primary);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--foreground);
+  opacity: 0.85;
+  margin: 0;
+}
+
+// Основная карточка MyDonate
+.card {
+  background: var(--gray-alpha-100);
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 16px;
+  margin-bottom: 0.25rem;
+}
+
+.cardTitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cardText {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--foreground);
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0;
+}
+
+// Сетка с информацией
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--gray-alpha-100);
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.infoIcon {
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.infoTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem 0;
+}
+
+.infoText {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--foreground);
+  opacity: 0.8;
+  margin: 0;
+}
+
+// Секция поддержки
+.supportSection {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid var(--gray-alpha-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.supportTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.supportText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--foreground);
+  opacity: 0.85;
+  max-width: 520px;
+  margin: 0;
+}
+
+// Кнопки
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: var(--button-primary-hover);
+  }
+}
+
+.ctaTelegram {
+  background: #229ed9; // Фирменный цвет Telegram
+
+  &:hover {
+    background: #1b8ac1;
+  }
+}
+
+// Мобильная адаптация
+@media (max-width: 768px) {
+  .main {
+    padding: 100px 1rem 2rem;
+    gap: 2rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: 2rem 1.25rem;
+  }
+
+  .cardTitle {
+    font-size: 1.35rem;
+  }
+
+  .cta {
+    width: 100%;
+  }
+}
