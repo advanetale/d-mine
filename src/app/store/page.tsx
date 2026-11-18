@@ -17,7 +17,7 @@ export default function Store() {
           <div className={styles.cardIcon}>
             <MdStorefront size={32} />
           </div>
-          <h2 className={styles.cardTitle}>Магазин D.Mine<</h2>
+          <h2 className={styles.cardTitle}>Магазин D.Mine</h2>
           <p className={styles.cardText}>
             Наш магазин работает на платформе агрегатора <strong>MyDonate</strong>. 
             Это обеспечивает безопасную оплату и мгновенную автоматическую выдачу 
