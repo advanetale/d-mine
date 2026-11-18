@@ -24,7 +24,7 @@ export default function Store() {
             всех товаров на сервере.
           </p>
           <a
-            href="https://dmine.mydonate.io/"
+            href="https://store.d-mine.net/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.cta}
