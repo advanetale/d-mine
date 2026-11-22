@@ -38,6 +38,7 @@ export default function WikiNavigation({
       pages: [
         pageMap.get("crafts"),
         pageMap.get("points"),
+        pageMap.get("profile"),
         pageMap.get("colored-nick"),
         pageMap.get("badges"),
       ].filter(Boolean) as WikiPage[],
