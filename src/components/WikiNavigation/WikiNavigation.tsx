@@ -36,6 +36,7 @@ export default function WikiNavigation({
     {
       title: "Игровые возможности",
       pages: [
+        pageMap.get("voice"),
         pageMap.get("crafts"),
         pageMap.get("points"),
         pageMap.get("profile"),
